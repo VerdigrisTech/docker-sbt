@@ -8,6 +8,18 @@ Lightweight Docker container built on top of
 [OpenJDK 8u container](https://hub.docker.com/_/openjdk/) which includes
 [sbt](https://www.scala-sbt.org).
 
+## Usage
+
+If you're building a Scala project, use this image as a base image for building
+containers:
+
+```dockerfile
+FROM verdigristech/sbt:0.13
+
+# Rest of your Dockerfile
+# ...
+```
+
 ---
 
 Copyright © 2018 Verdigris Technologies Inc. All rights reserved.
