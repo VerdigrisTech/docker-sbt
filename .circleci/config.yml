@@ -8,6 +8,9 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
+          name: Login to Docker Cloud
+          command: echo "$DOCKER_PASS" | docker login -u $DOCKER_USER --password-stdin
+      - run:
           name: Build Docker image
           command: docker build -t verdigristech/sbt:0.13 .
       - run:
