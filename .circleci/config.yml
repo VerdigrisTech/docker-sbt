@@ -23,5 +23,7 @@ workflows:
     jobs:
       - build_and_deploy:
           filters:
+            tags:
+              only: /v\d+(\.\d+)*/
             branches:
-              only: master
+              ignore: /.*/
